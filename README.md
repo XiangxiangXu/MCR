@@ -24,8 +24,8 @@ The feature extractor <img src="https://render.githubusercontent.com/render/math
 We can also compare the performance of MCR with the baseline method trained on Softmax classifier with Log loss (SL). When trained on 1,000 samples and set feature dimension <img src="https://render.githubusercontent.com/render/math?math=k%3D10">, the extracted features for two methods can be visualized by T-SNE [2] as (left: MCR, right: SL)
 
 <p float="left">
-<img src="images/mcr.png" width="512"> &nbsp;
-<img src="images/sl.png" width="512">
+<img src="images/mcr.png" width="400"> &nbsp;
+<img src="images/sl.png" width="400">
 </p>
 
 
