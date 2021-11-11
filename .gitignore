@@ -1,0 +1,4 @@
+# ignore generated html files
+    *.html
+# ignore temporary files
+    *~

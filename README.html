@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+
+</head>
+
+<body>
+
+<h1 id="akerasimplementationformaximalcorrelationregressionmcronmnist">A Keras Implementation for Maximal Correlation Regression (MCR) on MNIST</h1>
+
+<p>This repository contains a simple <a href="https://keras.io/">Keras</a> implementation of <a href="https://ieeexplore.ieee.org/abstract/document/8979352">Maximal Correlation Regression</a> (MCR), on the <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> dataset.</p>
+
+<h2 id="maximalcorrelationregression">Maximal Correlation Regression</h2>
+
+<p><a href="https://ieeexplore.ieee.org/abstract/document/8979352">Maximal Correlation Regression [1]</a> (MCR) is a regression analysis approach based on Hirschfeld-Gebelein-Rényi (HGR) maximal correlation. The basic idea is to represent the dependency between data variable <img src="https://render.githubusercontent.com/render/math?math=X"> and label <img src="https://render.githubusercontent.com/render/math?math=Y"> by their maximally correlated features <img src="https://render.githubusercontent.com/render/math?math=f%5E*(X)"> and <img src="https://render.githubusercontent.com/render/math?math=g%5E*(Y)">.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>The implementation is based on the maximizing of H-score of features f and g:</p>
+
+<img src="https://render.githubusercontent.com/render/math?math=H(f%2C%20g)%20%3D%20%5Cmathbb%7BE%7D%5Bf%5E%7B%5Cmathrm%7BT%7D%7D(X)g(Y)%5D%20-%20%5Cfrac%7B1%7D%7B2%7D%20%5Cmathrm%7Btr%7D(%5Cmathrm%7Bcov%7D(f)%5Cmathrm%7Bcov%7D(g))" width="400">
+
+<p>The network architecture is as follows [1, Figure 6]:</p>
+
+<img src="images/net.png" width="768">
+
+<p>The feature extractor is a simple CNN [1, Figure 2], and by default the feature dimension is <img src="https://render.githubusercontent.com/render/math?math=k%20%3D%20128">:</p>
+
+<img src="images/cnn.png" width="512">
+
+<p>We can also compare the performance of MCR with the baseline method trained on Softmax classifier with Log loss (SL). When trained on 1,000 samples and set feature dimension <img src="https://render.githubusercontent.com/render/math?math=k%3D10">, the extracted features for two methods can be visualized by T-SNE [2] as (left: MCR, right: SL)</p>
+
+<p float="left">
+<img src="images/mcr.png" width="512"> &nbsp;
+<img src="images/sl.png" width="512">
+</p>
+
+<h3 id="dependencies">Dependencies</h3>
+
+<ul>
+<li><a href="https://keras.io/">Keras</a></li>
+</ul>
+
+<h3 id="cite">Cite</h3>
+
+<p>If you use MCR in your work, please cite the original paper as:</p>
+
+<pre><code>@article{xu2020maximal,
+  title={Maximal correlation regression},
+  author={Xu, Xiangxiang and Huang, Shao-Lun},
+  journal={IEEE Access},
+  volume={8},
+  pages={26591--26601},
+  year={2020},
+  publisher={IEEE}
+}
+</code></pre>
+
+<h3 id="relatedalgorithms">Related Algorithms</h3>
+
+<p>The method of optimizing H-score is also in for multi-modal feature extraction [3] and unsupervised feature extraction [4], with similar implementations.</p>
+
+<h3 id="references">References</h3>
+
+<p>[1] Xu, Xiangxiang, and Shao-Lun Huang. &#8220;Maximal correlation regression.&#8221; IEEE Access 8 (2020): 26591&#8211;26601.</p>
+
+<p>[2] Van der Maaten, Laurens, and Geoffrey Hinton. &#8220;Visualizing data using t-SNE.&#8221; Journal of machine learning research 9.11 (2008).</p>
+
+<p>[3] Wang, Lichen, Jiaxiang Wu, Shao-Lun Huang, Lizhong Zheng, Xiangxiang Xu, Lin Zhang, and Junzhou Huang. &#8220;An efficient approach to informative feature extraction from multimodal data.&#8221; In Proceedings of the AAAI Conference on Artificial Intelligence, vol. 33, no. 01, pp. 5281&#8211;5288. 2019.</p>
+
+<p>[4] Huang, Shao-Lun, Xiangxiang Xu, and Lizhong Zheng. &#8220;An information-theoretic approach to unsupervised feature selection for high-dimensional data.&#8221; IEEE Journal on Selected Areas in Information Theory 1.1 (2020): 157&#8211;166.</p>
+
+</body>
+</html>
