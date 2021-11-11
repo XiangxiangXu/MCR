@@ -1,4 +1,5 @@
 # ignore generated html files
-    *.html
+*.html
 # ignore temporary files
-    *~
+*~
+.DS_Store
