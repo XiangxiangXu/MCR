@@ -17,7 +17,7 @@ The network architecture is as follows [1, Figure 6]:
 
 <img src="images/net.png" width="768">
 
-The feature extractor is a simple CNN [1, Figure 2], and by default the feature dimension is <img src="https://render.githubusercontent.com/render/math?math=k%20%3D%20128">:
+The feature extractor <img src="https://render.githubusercontent.com/render/math?math=%5Cmathrm%7BNN%7D_f"> is a simple CNN [1, Figure 2], and by default the feature dimension is <img src="https://render.githubusercontent.com/render/math?math=k%20%3D%20128">:
 
 <img src="images/cnn.png" width="512">
 
