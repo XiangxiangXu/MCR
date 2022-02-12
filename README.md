@@ -1,6 +1,6 @@
-# A Keras Implementation for Maximal Correlation Regression (MCR) on MNIST 
+# Implementations for Maximal Correlation Regression (MCR) on MNIST 
 
-This repository contains a simple [Keras](https://keras.io/) implementation of [Maximal Correlation Regression](https://ieeexplore.ieee.org/abstract/document/8979352) (MCR), on the [MNIST](http://yann.lecun.com/exdb/mnist/) dataset. 
+This repository contains simple [Keras](https://keras.io/) and [Pytorch](https://pytorch.org/) implementations of [Maximal Correlation Regression](https://ieeexplore.ieee.org/abstract/document/8979352) (MCR), on the [MNIST](http://yann.lecun.com/exdb/mnist/) dataset. 
 
 
 ## Maximal Correlation Regression
@@ -31,7 +31,10 @@ We can also compare the performance of MCR with the baseline method trained on S
 
 ### Dependencies
 * [Keras](https://keras.io/)
+or
+* [Pytorch](https://pytorch.org/)
 
+The two implementations are independent.
 
 ### Cite
 If you use MCR in your work, please cite the original paper as:
