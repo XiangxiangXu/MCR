@@ -1,4 +1,3 @@
-
 import torch
 from torch import nn, optim
 import torch.nn.functional as F
@@ -13,7 +12,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 num_epochs = 12
 batch_size = 128
-fdim = 128
+fdim = 128 # feature dimension
 
 num_classes = 10
 
@@ -57,7 +56,7 @@ train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=
 
 test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=True)
 
-
+# fNet: a simple convolutional neural net
 class fNet(nn.Module):
     def __init__(self, fdim):
         super().__init__()
@@ -75,6 +74,7 @@ class fNet(nn.Module):
         f = self.fc(f)
         return f        #x.view(-1, x.size(1))                
 
+# gNet: fully connected
 class gNet(nn.Module):
     def __init__(self, fdim, num_classes):
         super().__init__()
@@ -130,5 +130,5 @@ with torch.no_grad():
         y_onehot = torch.eye(num_classes)[y] # one-hot encoding
         f, g = fg_model(x, y_onehot)
         pygx, y_pred = fg_model.pred(x, py)
-        acc = (y_pred == y).sum() / float(y.size(0))
+        acc = (y_pred == y).sum() / float(y.size(0)) # accuracy
         print('test_hscore =', neg_hscore(f, g), '| acc = ', acc)
