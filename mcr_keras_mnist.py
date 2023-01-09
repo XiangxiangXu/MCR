@@ -1,4 +1,5 @@
 import os
+
 # depending on the runing environments, you may not need these two lines
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
@@ -11,7 +12,7 @@ Author: Xiangxiang Xu <xiangxiangxu.thu@gmail.com>
 Gets to 99.25% test accuracy after 12 epochs
 (there is still a lot of margin for parameter tuning).
 
-Log-loss v.s. H-score
+With a comparison between Log-loss and H-score
 '''
 
 import keras
