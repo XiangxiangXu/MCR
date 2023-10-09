@@ -11,7 +11,8 @@ This repository contains simple [Keras](https://keras.io/) and [Pytorch](https:/
 ## Implementation
 The implementation is based on the maximizing of H-score of features f and g:
 
-<img src="https://render.githubusercontent.com/render/math?math=H(f%2C%20g)%20%3D%20%5Cmathbb%7BE%7D%5Bf%5E%7B%5Cmathrm%7BT%7D%7D(X)g(Y)%5D%20-%20%5Cfrac%7B1%7D%7B2%7D%20%5Cmathrm%7Btr%7D(%5Cmathrm%7Bcov%7D(f)%5Cmathrm%7Bcov%7D(g))" width="400">
+$$H(f, g) = \mathbb{E}[f^T(X)g(Y)] - \mathbb{E}[f^T(X)]\mathbb{E}[g(Y)] - \frac12 \mathrm{tr}\left(\mathbb{E}[f(X) f^T(X)]\mathbb{E}[g(Y)g^T(Y)]\right)$$
+
 
 The network architecture is as follows [1, Figure 6]:
 
