@@ -20,11 +20,11 @@ The network architecture is as follows [1, Figure 6]:
 
 <img src="images/net.png" width="768">
 
-The feature extractor <img src="https://render.githubusercontent.com/render/math?math=%5Cmathrm%7BNN%7D_f"> is a simple CNN [1, Figure 2], and by default the feature dimension is <img src="https://render.githubusercontent.com/render/math?math=k%20%3D%20128">:
+The feature extractor $\mathtt{NN}_f$ is a simple CNN [1, Figure 2], and by default, the output feature dimension is $k = 128$:
 
 <img src="images/cnn.png" width="512">
 
-We can also compare the performance of MCR with the baseline method trained on **S**oftmax classifier with **L**og loss (SL). When trained on 1,000 samples and set feature dimension <img src="https://render.githubusercontent.com/render/math?math=k%3D10">, the extracted features for two methods can be visualized by T-SNE [2] as (left: MCR, right: SL)
+We can also compare the performance of MCR with the baseline method trained on **S**oftmax classifier with **L**og loss (SL). When trained on 1,000 samples and set feature dimension $k = 10$, the extracted features for two methods can be visualized by T-SNE [2] as (left: MCR, right: SL)
 
 <p float="left">
 <img src="images/mcr.png" width="400"> &nbsp;
