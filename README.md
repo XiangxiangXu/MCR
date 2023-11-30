@@ -4,7 +4,7 @@ This repository contains simple [Keras](https://keras.io/) and [Pytorch](https:/
 
 
 ## Maximal Correlation Regression
-[Maximal Correlation Regression [1]](https://ieeexplore.ieee.org/abstract/document/8979352) (MCR) is a regression analysis approach based on Hirschfeld-Gebelein-Rényi (HGR) maximal correlation. The basic idea is to represent the dependency between data variable $X$ and label $Y$ by their maximally correlated features $f^*(X)$ and $g^*(Y)$.
+[Maximal Correlation Regression [1]](https://ieeexplore.ieee.org/abstract/document/8979352) (MCR) is a regression analysis approach based on Hirschfeld-Gebelein-Rényi (HGR) maximal correlation. The basic idea is to represent the dependency between data variable $X$ and label $Y$ by their maximally correlated features $f^\ast(X)$ and $g^\ast(Y)$.
 
 
 
