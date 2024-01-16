@@ -14,7 +14,7 @@ The implementation is based on the maximizing of the H-score of features f and g
 $$H(f, g) = \mathbb{E}[f^T(X)g(Y)] - \mathbb{E}[f^T(X)]\mathbb{E}[g(Y)] - \frac12 \mathrm{tr}\left(\mathbb{E}[f(X) f^T(X)]\mathbb{E}[g(Y)g^T(Y)]\right)$$
 
 [^1]: The implementation in the repo used an H-score on zero-mean features.
-[^2]: A more advanced version, which learns structured features, can be found [here](https://github.com/XiangxiangXu/h-nest).
+[^2]: A more advanced version, which learns structured features, is implemented in [H_nest_mnist.ipynb](https://github.com/XiangxiangXu/MCR/blob/main/H_nest_mnist.ipynb).
 
 The network architecture is as follows [1, Figure 6]:
 
@@ -60,7 +60,7 @@ The method of optimizing H-score is also used for multi-modal feature extraction
 ### References 
 [1] Xu, Xiangxiang, and Shao-Lun Huang. "Maximal correlation regression." IEEE Access 8 (2020): 26591-26601.
 
-[2] Van der Maaten, Laurens, and Geoffrey Hinton. "Visualizing data using t-SNE." Journal of machine learning research 9.11 (2008).
+[2] Van der Maaten, Laurens, and Geoffrey Hinton. "Visualizing data using t-SNE." Journal of Machine Learning Research 9.11 (2008).
 
 [3] Wang, Lichen, Jiaxiang Wu, Shao-Lun Huang, Lizhong Zheng, Xiangxiang Xu, Lin Zhang, and Junzhou Huang. "An efficient approach to informative feature extraction from multimodal data." In Proceedings of the AAAI Conference on Artificial Intelligence, vol. 33, no. 01, pp. 5281-5288. 2019.
 
