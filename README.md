@@ -11,7 +11,7 @@ This repository contains simple [Keras](https://keras.io/) and [Pytorch](https:/
 ## Implementation
 The implementation is based on the maximizing of the H-score of features f and g[^1][^2]:
 
-$$H(f, g) = \mathbb{E}[f^T(X)g(Y)] - \mathbb{E}[f^T(X)]\mathbb{E}[g(Y)] - \frac12 \mathrm{tr}\left(\mathbb{E}[f(X) f^T(X)]\mathbb{E}[g(Y)g^T(Y)]\right)$$
+$$\mathscr{H}(f, g) = \mathbb{E}[f^T(X)g(Y)] - \mathbb{E}[f^T(X)]\mathbb{E}[g(Y)] - \frac12 \mathrm{tr}\left(\mathbb{E}[f(X) f^T(X)]\mathbb{E}[g(Y)g^T(Y)]\right)$$
 
 [^1]: The implementation in the repo used an H-score on zero-mean features.
 [^2]: A more advanced version, which learns structured features, is implemented in [H_nest_mnist.ipynb](https://github.com/XiangxiangXu/MCR/blob/main/H_nest_mnist.ipynb).
