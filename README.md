@@ -16,6 +16,10 @@ $$H(f, g) = \mathbb{E}[f^T(X)g(Y)] - \mathbb{E}[f^T(X)]\mathbb{E}[g(Y)] - \frac1
 [^1]: The implementation in the repo used an H-score on zero-mean features.
 [^2]: A more advanced version, which learns structured features, is implemented in [H_nest_mnist.ipynb](https://github.com/XiangxiangXu/MCR/blob/main/H_nest_mnist.ipynb).
 
+### Computation of H-score
+
+
+### MCR Net
 The network architecture is as follows [1, Figure 6]:
 
 <img src="images/net.png" width="768">
