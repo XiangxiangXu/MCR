@@ -18,8 +18,9 @@ $$H(f, g) = \mathbb{E}[f^T(X)g(Y)] - \mathbb{E}[f^T(X)]\mathbb{E}[g(Y)] - \frac1
 
 ### Computation of H-score
 
+<img src="images/hscore.png" width="768">
 
-### MCR Net
+### MCR Nets
 The network architecture is as follows [1, Figure 6]:
 
 <img src="images/net.png" width="768">
