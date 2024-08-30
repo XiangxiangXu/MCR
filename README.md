@@ -59,7 +59,7 @@ If you use MCR in your work, please cite the original paper as:
 ```
 
 ### Related Algorithms
-The method of optimizing H-score is also used for multi-modal feature extraction [3] and unsupervised feature extraction [4], with similar implementations.
+The method of optimizing H-score is also used for multi-modal feature extraction [3] and unsupervised/multiview feature extraction [4], with similar implementations.
 
 
 ### References 
